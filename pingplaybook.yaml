@@ -1,6 +1,9 @@
-name: ping the node
-hosts: nginx
-tasks:
-  - name: ping
-    ansible.builtin.ping:
+# playbook is list of plays always starts with -
+- name: ping the node
+  hosts: nginx
+  tasks:
+      - name: ping the server
+        ansible.builtin.ping:
+
+
 
