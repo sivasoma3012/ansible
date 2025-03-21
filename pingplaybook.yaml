@@ -2,8 +2,8 @@
 - name: ping the node
   hosts: nginx
   tasks:
-      - name: ping the server
-        ansible.builtin.ping:
+    - name: ping the server
+      ansible.builtin.ping:
 
 
 
