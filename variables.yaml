@@ -5,11 +5,11 @@
     NAME: siva
     STATE: AP
     DISTRICT: GUNTUR
-  vars:
+  
   tasks:
   - name: using varibles
     ansible.builtin.debug:  #for printing we use debug command
       msg: "{{NAME}}IS FROM {{DISTRICT}} AND {{STATE}}"
-  - name: using varibles
+  - name:  varibales # should not be same
     ansible.builtin.debug:  #for printing we use debug command
       msg: "IN {{STATE}} THERE IS A PLACE CALLED {{DISTRICT}} THERE YOU FIND {{NAME}}"
