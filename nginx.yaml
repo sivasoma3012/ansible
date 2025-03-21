@@ -5,7 +5,7 @@
   - name: installing nginx
     ansible.builtin.apt:
       name: nginx
-      state: installed
+      state: present
       enabled: yes
 
   - name: start nginx
