@@ -1,0 +1,10 @@
+- name: varibles
+  hosts: nginx
+  become: yes
+  tasks:
+  - name: variables at cli
+    ansible.builtin.debug:
+      msg: "givin varibales from cli {{try}}"
+
+
+#ansible-playbook -i inventory.ini -e "ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/arjun.pem" vars-cli.pem
