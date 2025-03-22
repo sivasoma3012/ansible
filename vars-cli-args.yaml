@@ -1,0 +1,11 @@
+- name: passing varibles from args/cli
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: printing from cli
+    ansible.builtin.debug:
+      msg: "this is {{ name }}, from {{ place }}"
+
+
+#pass like this
+#ansible-playbook -i inventory.ini -e "name = sivasoma , place = guntur", playbook.yaml
