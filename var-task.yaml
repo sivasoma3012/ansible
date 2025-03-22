@@ -1,0 +1,16 @@
+- name: vars for tasklevel
+  hosts: localhost
+  become: yes
+  #parent or play level it is a default one
+  vars: 
+    money: 100000
+    land: 100 hectors
+  tasks:
+  - name: siva #this is inhertance you can use that or override that
+    vars:
+      money: 2000000 
+      land : 110 hectors
+      houses: 3
+    ansible.builtin.debug:
+      msg: "he has enough for {{money}} for new {{land}} and he is willing to buy {{houses}}"
+    
