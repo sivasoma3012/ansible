@@ -1,0 +1,7 @@
+- name: vars from inventory
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: declaring in inventory
+    ansible.builtin.debug:
+      msg: username {{ansible_user}} , password {{ansible_password}}
