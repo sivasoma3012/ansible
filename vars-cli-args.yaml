@@ -4,8 +4,8 @@
   tasks:
   - name: printing from cli
     ansible.builtin.debug:
-      msg: "this is {{ name }}, from {{ place }}"
+      msg: "Name: {{ name }}, Place: {{ place }}"
 
 
 #pass like this
-#ansible-playbook -i inventory.ini -e "name = sivasoma , place = guntur", playbook.yaml
+#ansible-playbook -i inventory.ini -e "name = 'sivasoma' , place = 'guntur'" playbook.yaml
