@@ -8,4 +8,4 @@
 
 
 #pass like this
-#ansible-playbook -i inventory.ini -e "name = 'sivasoma' , place = 'guntur'" playbook.yaml
+#ansible-playbook -i inventory.ini -e "name='siva soma' place='guntur'" vars-cli-args.yaml

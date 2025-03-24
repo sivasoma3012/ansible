@@ -1,0 +1,6 @@
+- name: conditions
+  hosts: localhost
+  tasks:
+  - name: user exist or not
+    ansible.builtin.command: id roboshop # user command module if the module is not exist
+    register: output #output of the command is register in "register" the word is output custom
