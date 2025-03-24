@@ -7,5 +7,6 @@
       state: "{{item.state}}''
     #list of map
     loop:
-    - {name : 'git' , state: 'restart'}
+    - {name : 'git' , state: 'restarted'}
     - {name: 'postfix' , state: 'absent'}
+
