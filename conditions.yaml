@@ -10,7 +10,7 @@
       msg: " output: {{output}}"
   - name: exist status
     ansible.builtin.debug:
-      msg: {{output.rc}}
+      msg: "{{output.rc}}"
   - name: create user
     ansbile.builtin.user:
       name: roboshop
