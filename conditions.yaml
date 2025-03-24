@@ -4,3 +4,14 @@
   - name: user exist or not
     ansible.builtin.command: id roboshop # user command module if the module is not exist
     register: output #output of the command is register in "register" the word is output custom
+    ignore_errors: true #in ansible if it is failed automatically throws error so to ignore it
+  - name: print the result
+    ansible.builtin.debug:
+      msg: " output: {{output}}"
+  - name: exist status
+    ansible.builtin.debug:
+      msg: {{output.rc}}
+  - name: create user
+    ansbile.builtin.user:
+      name: roboshop
+    when: output.rc != 0
