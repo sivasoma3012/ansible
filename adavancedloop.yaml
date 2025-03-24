@@ -1,0 +1,11 @@
+- name: installing multiple packages
+  hosts: localhost
+  tasks: 
+  - name: packages
+    ansible.builtin.apt:
+      name: "{{item.name}}"
+      state: "{{item.state}}''
+    #list of map
+    loop:
+    - {name : 'git' , state: 'restart'}
+    - {name: 'postfix' , state: 'absent'}
