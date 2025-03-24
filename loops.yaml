@@ -1,0 +1,12 @@
+- name: loops
+  hosts: localhost
+  tasks:
+  - name: loops for testing
+    ansibile.builtin.debug:
+      msg: "hi ... {{item}}"
+    loop:
+    - siva
+    - kalyan
+    - sudheer
+    - sai
+    
